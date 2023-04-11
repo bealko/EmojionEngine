@@ -16,7 +16,7 @@ With a simple and easy-to-use API, you can add engaging and expressive emojis to
 
 ## Usage 👆
 
-To start using EmojionEngine, simply import it into your JavaScript file and start adding fun emojis to your projects!
+To start using EmojionEngine, simply add it into your /modules/emojionengine and start adding fun emojis to your projects!
 ```javascript
 import EmojionEngine from './js/modules/emojionengine/src/core/emojionengine.js';
 
