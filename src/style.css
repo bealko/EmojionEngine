@@ -1,0 +1,75 @@
+:root {
+  --cursor-size: 30px;
+}
+
+#emojion-cursor {
+  pointer-events:none;
+  position: absolute;
+  font-size: var(--cursor-size);
+  z-index: 50;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+  
+}
+#emojion-cursor.click {
+  
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  font-size: calc(var(--cursor-size) * 0.8);
+}
+
+#emojion-cursor.active{
+  transform: rotate(0deg);
+}
+#emojion-cursor.inactive{
+  transform: rotate(-25deg);
+  
+}
+
+#emojion-cursor-item {
+  pointer-events:none;
+  position: fixed;
+  font-size: var(--cursor-size);
+  z-index: 55;
+  
+}
+#emojion-cursor-item.visible {
+  transition: transform 0.1s ease-in-out;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 1);
+  transform: rotate(25deg) translate(-15px, -10px); 
+  font-size: 30px;
+
+}
+#emojion-cursor-item.visible.use {
+  animation:  0.1s ease-in 1s 2 reverse both paused slidein;
+  transform: rotate(180deg) translate(15px, 5px);
+  font-size: 25px;
+  
+}
+
+#emojion-cursor-item.hidden {
+  transform: translate(0px, -100px);
+  transition: transform 0.2s ease-in-out;
+  color: rgba(255, 255, 255, 0);
+  
+}
+
+
+.emojion-button {
+  transition: all 0.2s ease-in-out;
+}
+.emojion-input{
+  transition: all 0.2s ease;
+}
+.emojion-input:hover {
+  transform: scale(1.02);
+}
+
+  
+.emojion-button:hover {
+  transform: scale(1.05);
+}
+.emojion-button:active {
+  transform: scale(0.95);
+}
+
