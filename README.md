@@ -7,7 +7,7 @@ With a simple and easy-to-use API, you can add engaging and expressive emojis to
 
 - 🏗️ Easy-to-use API for quick integration into your projects
 
-- 📦 Lightweight with minimal dependencies
+- 📦 Lightweight
 
 
 
