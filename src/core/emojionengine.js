@@ -4,7 +4,6 @@ import '../style.css';
 class EmojionEngine {
 
   constructor(options) {
-    //this.cursors = cursors
     this.cursorSize = '30px';
     this.lastAnimationFrame = null;
     this.cursorColor = 'black';
@@ -102,6 +101,9 @@ class EmojionEngine {
 
     
     document.querySelectorAll('.lock').forEach((element) => {
+
+      this.emojionCursorItem.classList.add("emojion-element");
+
       element.addEventListener('mouseover', () => {
         if(this.emojionCursor.classList.contains("click")) return;
         this.setEmojionCursor(["lock"],["inactive"]);
@@ -117,7 +119,9 @@ class EmojionEngine {
 
     
     document.querySelectorAll('[type=number],[type=text] ').forEach((element) => {
-      
+
+      this.emojionCursorItem.classList.add("emojion-element");
+
       element.addEventListener('mouseover', () => {
           if(this.emojionCursor.classList.contains("click")) return;
           this.cursorOffset = { x: -4, y: -0};
@@ -134,7 +138,9 @@ class EmojionEngine {
     });
 
     document.querySelectorAll('[type=range]').forEach((element) => {
-      
+
+      this.emojionCursorItem.classList.add("emojion-element");
+
       element.addEventListener('mouseover', () => {
           if(this.emojionCursor.classList.contains("click")) return;
           this.cursorOffset = { x: -12, y: -12};
